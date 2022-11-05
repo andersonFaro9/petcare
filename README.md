@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Vamos aprender juntos um aplicação chamada de PetCare, um web App  que se preocupa com o bem estar dos animais. como posicionar elementos em uma aplicação responsiva aprendendo e explorando o conceito de mobilefirst com FlexBox CSS, Grid CSS, Next Js e Tailwindcss.Estou partindo do princípio que você está familarizando com o Next Js, Tailwindcss e Css. Espero que gostem!
 
-## Getting Started
+- Em primeiro lugar, vamos criar  acrescentar ao componente Header nosso hook em em seguida uma constante com nome de menuItemClassName que recebe um objeto da biblioteca clsx que ajuda para manipulação da lógica do visible e hidden.
 
-First, run the development server:
+#### Trecho do código:
 
-```bash
-npm run dev
-# or
-yarn dev
+ - Vamos criar um hook com seu estado inicial false:
+
+
+```ts
+
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    
 ```
+   
+  ##### Em seguida utilizaremos  a lib clsx que facilita o uso de condições numa classe:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```ts
+const menuItemClassName = clsx (
+   'md:block md:text-lg text-4lg hover:underline visited:font-bold',
+   {visible: mobileMenuOpen, hidden:!mobileMenuOpen}
+)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+##### No trecho acima nós criamos os breakpoints css no estilo do tailwindcss. O md:block significa que o menu aparecerá em modo de bloco, o md:text-lg possui largura de 18px  e representado pelo tailwindcss com font-size: 1.125rem e por fim o md representa o minímo de 768 de largura: ```@media (min-width: 768px) { ... } ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+##### Para mais detalhes verificar aqui no site tailwindcss: https://tailwindcss.com/docs/responsive-design#using-custom-breakpoints
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##### Todo o contéudo pode ser verificado no componente Header dessa aplicação ou através desse link criado, todo o código foi pela rocketseat e o creator João Balbino:nesse link:  https://github.com/rocketseat-creators-program/responsividade-tailwindcss-reactjs-menu-hamburger
+    h
