@@ -14,7 +14,7 @@ export default function Presentation () {
           <h1 className='flex text-xs  text-left sm:text-sm md:text-md w-72 lg:text-4xl'>
             Toda assistência médica para seu pet.
           </h1>
-          <p className='flex -mb-10 font-light text-sm max-w-prose text-left md:w-96 pt-3'>
+          <p className='flex -mb-10 md:mb-2 font-light text-sm max-w-prose text-left md:w-96 pt-3'>
             Todo nosso empenho é para a saúde do seu bichinho. Vamos além dos
             sintomas para proporcionar uma cura a longo prazo.
           </p>
