@@ -1,15 +1,13 @@
 import Image from 'next/image'
 export default function Main() {
   return (
-    <div>
-      <p className='flex ml-2 md:justify-center mb-4 text-orange-700'>
-        Serviços
-      </p>
-      <p className='flex ml-2 text-sm md:justify-center font-bold md:text-3xl mb-20'>
+    <div className= 'justify-center'>
+      <p className='ml-5  mb-4 text-orange-700'>Serviços</p>
+      <p className='flex ml-5 text-sm md:justify-center font-bold md:text-3xl mb-5'>
         Como podemos ajudá-los?
       </p>
 
-      <div className='flex flex-wrap flex-cols-3  gap-1 ml-2  md:justify-around'>
+      <div className='flex flex-wrap flex-cols-3  gap-1 ml-5  md:justify-around'>
         <div className='bg-orange-200 w-64 p-5 hover:bg-orange-800 rounded-md '>
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -75,11 +73,11 @@ export default function Main() {
         </div>
       </div>
 
-      <div className='flex flex-col mt-4 ml-2 md:flex-row leading-loose justify-between gap-20 md:m-24'>
+      <div className='flex flex-col mt-4 ml-5 md:flex-row  justify-between gap-20 md:m-24'>
         <div className=' md:flex flex-col justify-center '>
           <p className='md:text-3xl w-52 '>Entre em contato conosco</p>
 
-          <div className=' flex   items-center gap-2 mt-4'>
+          <div className=' flex  items-center gap-2 mt-2'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
@@ -103,7 +101,7 @@ export default function Main() {
             <p className='flex md:w-96'>Rua B, Alváro Dias Silvante.</p>
           </div>
 
-          <div className=' flex flex-cols items-center  gap-2'>
+          <div className=' flex flex-cols items-center -mb-12 gap-2'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
@@ -123,7 +121,7 @@ export default function Main() {
           </div>
         </div>
         <Image
-          className='invisible  hover:bg-orange-700 md:visible'
+          className='  hover:bg-orange-700 md:visible'
           src='/images/contato_pet2.svg'
           alt='foto'
           width={250}
